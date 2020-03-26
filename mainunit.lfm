@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 471
+  Left = 374
   Height = 297
-  Top = 139
+  Top = 280
   Width = 297
   Align = alRight
   Anchors = []
@@ -131,13 +131,13 @@ object MainForm: TMainForm
       Caption = '4'
       OnClick = CommaAndDigitsClick
     end
-    object ReverseDivisionButton: TSpeedButton
+    object SqrButton: TSpeedButton
       Left = 208
       Height = 40
       Top = 120
       Width = 40
-      Caption = '1/x'
-      OnClick = ReverseDivisionButtonClick
+      Caption = '^2'
+      OnClick = SqrButtonClick
     end
     object MinusButton: TSpeedButton
       Left = 168
@@ -245,26 +245,6 @@ object MainForm: TMainForm
       OnExecute = CtrlVActionExecute
       ShortCut = 16470
     end
-    object MMinusAction: TAction
-      Caption = 'MMinusAction'
-      ShortCut = 16465
-    end
-    object MPlusAction: TAction
-      Caption = 'MPlusAction'
-      ShortCut = 16464
-    end
-    object MSAction: TAction
-      Caption = 'MSAction'
-      ShortCut = 16461
-    end
-    object MRAction: TAction
-      Caption = 'MRAction'
-      ShortCut = 16466
-    end
-    object MCAction: TAction
-      Caption = 'MCAction'
-      ShortCut = 16460
-    end
     object CEButtonAction: TAction
       Caption = 'CEButtonAction'
       OnExecute = CEButtonActionExecute
@@ -277,7 +257,6 @@ object MainForm: TMainForm
     end
     object ReverseDivisionAction: TAction
       Caption = 'ReverseDivisionAction'
-      OnExecute = ReverseDivisionActionExecute
       ShortCut = 82
     end
   end
@@ -307,33 +286,35 @@ object MainForm: TMainForm
         OnClick = AboutMenuItemClick
       end
     end
-    object MenuItem1: TMenuItem
+    object ModeSubMenu: TMenuItem
       Caption = 'Режим'
-      object MenuItem2: TMenuItem
+      object BasicMenuItem: TMenuItem
         Caption = 'Простой'
+        OnClick = BasicMenuItemClick
       end
-      object MenuItem3: TMenuItem
+      object ProMenuItem: TMenuItem
         Caption = 'Расширенный'
+        OnClick = ProMenuItemClick
       end
     end
-    object MenuItem4: TMenuItem
+    object LangSubMenu: TMenuItem
       Caption = 'Язык'
-      object MenuItem5: TMenuItem
+      object RusMenuItem: TMenuItem
         Caption = 'Русский'
       end
-      object MenuItem6: TMenuItem
+      object EngMenuItem: TMenuItem
         Caption = 'Английский'
       end
     end
-    object MenuItem7: TMenuItem
+    object ThemeSubMenu: TMenuItem
       Caption = 'Темы Оформления'
-      object MenuItem8: TMenuItem
+      object name1MenuItem: TMenuItem
         Caption = '1'
       end
-      object MenuItem9: TMenuItem
+      object name2MenuItem: TMenuItem
         Caption = '2'
       end
-      object MenuItem10: TMenuItem
+      object ChildMenuItem: TMenuItem
         Caption = 'Детская'
       end
     end

@@ -15,21 +15,16 @@ type
   TMainForm = class(TForm)
     CopyMenuItem: TMenuItem;
     HistoryLabel: TLabel;
-    MCAction: TAction;
-    MenuItem1: TMenuItem;
-    MenuItem10: TMenuItem;
-    MenuItem2: TMenuItem;
-    MenuItem3: TMenuItem;
-    MenuItem4: TMenuItem;
-    MenuItem5: TMenuItem;
-    MenuItem6: TMenuItem;
-    MenuItem7: TMenuItem;
-    MenuItem8: TMenuItem;
-    MenuItem9: TMenuItem;
-    MMinusAction: TAction;
-    MPlusAction: TAction;
-    MRAction: TAction;
-    MSAction: TAction;
+    ModeSubMenu: TMenuItem;
+    ChildMenuItem: TMenuItem;
+    BasicMenuItem: TMenuItem;
+    ProMenuItem: TMenuItem;
+    LangSubMenu: TMenuItem;
+    RusMenuItem: TMenuItem;
+    EngMenuItem: TMenuItem;
+    ThemeSubMenu: TMenuItem;
+    name1MenuItem: TMenuItem;
+    name2MenuItem: TMenuItem;
     PasteMenuItem: TMenuItem;
     ReverseDivisionAction: TAction;
     PlusMinusButtonAction: TAction;
@@ -47,7 +42,7 @@ type
     EqualButton: TSpeedButton;
     PlusButton: TSpeedButton;
     PercentButton: TSpeedButton;
-    ReverseDivisionButton: TSpeedButton;
+    SqrButton: TSpeedButton;
     MinusButton: TSpeedButton;
     DigButton3: TSpeedButton;
     DigButton2: TSpeedButton;
@@ -78,13 +73,13 @@ type
     procedure EqualButtonClick(Sender: TObject);
     procedure HelpMenuItemClick(Sender: TObject);
     procedure KeyboardInput(Sender: TObject; var Key: char);
-    procedure MenuItem2Click(Sender: TObject);
+    procedure BasicMenuItemClick(Sender: TObject);
     procedure PercentButtonClick(Sender: TObject);
     procedure ArithmeticButtonsClick(Sender: TObject);
     procedure PlusMinusButtonClick(Sender: TObject);
     procedure PlusMinusButtonActionExecute(Sender: TObject);
-    procedure ReverseDivisionActionExecute(Sender: TObject);
-    procedure ReverseDivisionButtonClick(Sender: TObject);
+    procedure ProMenuItemClick(Sender: TObject);
+    procedure SqrButtonClick(Sender: TObject);
     procedure SqrtButtonClick(Sender: TObject);
   private
     double1,double2, double2BAK: extended;
@@ -251,6 +246,21 @@ begin
   end;
 end;
 
+procedure TMainForm.BasicMenuItemClick(Sender: TObject);
+begin
+  //MainForm.ShowModal
+end;
+
+
+
+procedure TMainForm.ProMenuItemClick(Sender: TObject);
+begin
+  //ProForm.ShowModal
+end;
+
+
+
+
 
 //кнопка процента
 procedure TMainForm.PercentButtonClick(Sender: TObject);
@@ -310,20 +320,17 @@ begin
   PlusMinusButton.Click;
 end;
 
-procedure TMainForm.ReverseDivisionActionExecute(Sender: TObject);
+procedure TMainForm.SqrButtonClick(Sender: TObject);
 begin
-  ReverseDivisionButton.Click;
-end;
-
-procedure TMainForm.ReverseDivisionButtonClick(Sender: TObject);
-begin
-  if (StrToFloatDef(OutputEdit.Text,0) <> 0) THEN
-    OutputEdit.Text := FloatToStr(1/StrToFloatDef(OutputEdit.Text,0))
-  else
+  try
+     OutputEdit.Text := FloatToStr(sqr(StrToFloat(OutputEdit.Text)));
+  except
+    on Exception do
     begin
       CButton.Click;
-      OutputEdit.Text := 'Error: division by zero';
+      OutputEdit.Text := 'Error: invalid input';
     end;
+  end;
 end;
 
 procedure TMainForm.SqrtButtonClick(Sender: TObject);
