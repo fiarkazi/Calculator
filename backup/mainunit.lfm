@@ -1,14 +1,14 @@
 object MainForm: TMainForm
-  Left = 374
+  Left = 722
   Height = 297
-  Top = 280
+  Top = 247
   Width = 297
   Align = alRight
   Anchors = []
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Калькулятор'
-  ClientHeight = 277
+  ClientHeight = 258
   ClientWidth = 297
   Color = clGradientInactiveCaption
   KeyPreview = True
@@ -17,14 +17,20 @@ object MainForm: TMainForm
   OnKeyPress = KeyboardInput
   Position = poDesktopCenter
   LCLVersion = '2.0.6.0'
+  object Image1: TImage
+    Left = 0
+    Height = 279
+    Top = -48
+    Width = 297
+  end
   object ButtonsPanel: TPanel
     Left = 0
-    Height = 208
+    Height = 229
     Top = 48
-    Width = 256
+    Width = 297
     Align = alCustom
-    ClientHeight = 208
-    ClientWidth = 256
+    ClientHeight = 229
+    ClientWidth = 297
     TabOrder = 0
     object BackspaceButton: TSpeedButton
       Left = 48
@@ -136,7 +142,7 @@ object MainForm: TMainForm
       Height = 40
       Top = 120
       Width = 40
-      Caption = '1/x'
+      Caption = '^2'
       OnClick = SqrButtonClick
     end
     object MinusButton: TSpeedButton
@@ -216,7 +222,7 @@ object MainForm: TMainForm
     Left = 7
     Height = 23
     Top = 24
-    Width = 240
+    Width = 281
     Alignment = taRightJustify
     AutoSize = False
     ReadOnly = True
@@ -224,7 +230,7 @@ object MainForm: TMainForm
     Text = '0.'
   end
   object HistoryLabel: TLabel
-    Left = 101
+    Left = 142
     Height = 15
     Top = 8
     Width = 146
@@ -264,24 +270,25 @@ object MainForm: TMainForm
     left = 16
     top = 64
     object EditSubMenu: TMenuItem
-      Caption = 'Edit'
+      Caption = 'Правка'
       object CopyMenuItem: TMenuItem
         Action = CtrlCAction
+        Caption = 'Копировать'
       end
       object PasteMenuItem: TMenuItem
         Action = CtrlVAction
-        Caption = 'Paste'
+        Caption = 'Вставить'
       end
     end
     object HelpSubMenu: TMenuItem
-      Caption = 'Help'
+      Caption = 'Помощь'
       object HelpMenuItem: TMenuItem
-        Caption = 'Help'
+        Caption = 'Помощь'
         ShortCut = 112
         OnClick = HelpMenuItemClick
       end
       object AboutMenuItem: TMenuItem
-        Caption = 'About'
+        Caption = 'О программе'
         ShortCut = 16496
         OnClick = AboutMenuItemClick
       end
@@ -301,21 +308,26 @@ object MainForm: TMainForm
       Caption = 'Язык'
       object RusMenuItem: TMenuItem
         Caption = 'Русский'
+        OnClick = RusMenuItemClick
       end
       object EngMenuItem: TMenuItem
         Caption = 'Английский'
+        OnClick = EngMenuItemClick
       end
     end
     object ThemeSubMenu: TMenuItem
       Caption = 'Темы Оформления'
       object name1MenuItem: TMenuItem
-        Caption = '1'
+        Caption = 'Серость'
+        OnClick = name1MenuItemClick
       end
       object name2MenuItem: TMenuItem
-        Caption = '2'
+        Caption = 'Аллергия'
+        OnClick = name2MenuItemClick
       end
       object ChildMenuItem: TMenuItem
         Caption = 'Детская'
+        OnClick = ChildMenuItemClick
       end
     end
   end

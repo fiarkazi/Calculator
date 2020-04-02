@@ -14,15 +14,22 @@ type
   TAboutForm = class(TForm)
     OkButton: TButton;
     LicenseMemo: TMemo;
+    procedure FormCreate(Sender: TObject);
+    procedure LicenseMemoChange(Sender: TObject);
     procedure OkButtonClick(Sender: TObject);
+    procedure langch(lang: String);
   private
     { private declarations }
   public
     { public declarations }
   end;
 
+resourcestring
+  sLicenseText = 'Программа создана при поддержке студентов';
+
 var
   AboutForm: TAboutForm;
+  lang: String;
 
 implementation
 
@@ -30,16 +37,27 @@ implementation
 
 { TAboutForm }
 
-
-
-procedure TAboutForm.GitHubButtonClick(Sender: TObject);
+procedure TAboutForm.FormCreate(Sender: TObject);
 begin
-  OpenURL('https://github.com/boriswinner/fpcCalc');
+  LicenseMemo.Text:= sLicenseText;
+end;
+
+procedure TAboutForm.LicenseMemoChange(Sender: TObject);
+begin
+
 end;
 
 procedure TAboutForm.OkButtonClick(Sender: TObject);
 begin
   AboutForm.Close;
+end;
+
+procedure langch(lang: String);
+begin
+  if lang = 'ru' then
+     AboutForm.LicenseMemo.Text:= 'Программа создана при поддержке студентов.'
+  else
+     AboutForm.LicenseMemo.Text:= 'The program was created with the support of students.';
 end;
 
 end.

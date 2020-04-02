@@ -1,7 +1,7 @@
 object AboutForm: TAboutForm
-  Left = 278
+  Left = 671
   Height = 243
-  Top = 206
+  Top = 190
   Width = 429
   ActiveControl = OkButton
   Caption = 'About the program'
@@ -11,6 +11,7 @@ object AboutForm: TAboutForm
   Constraints.MaxWidth = 429
   Constraints.MinHeight = 243
   Constraints.MinWidth = 429
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '2.0.6.0'
   object LicenseMemo: TMemo
@@ -21,16 +22,9 @@ object AboutForm: TAboutForm
     Lines.Strings = (
       'ABOUT HERE!'
     )
+    OnChange = LicenseMemoChange
     ReadOnly = True
     TabOrder = 0
-  end
-  object LicenseButton: TButton
-    Left = 10
-    Height = 25
-    Top = 208
-    Width = 86
-    Caption = 'Show License'
-    TabOrder = 1
   end
   object OkButton: TButton
     Left = 336
@@ -39,14 +33,6 @@ object AboutForm: TAboutForm
     Width = 83
     Caption = 'Ok'
     OnClick = OkButtonClick
-    TabOrder = 2
-  end
-  object GitHubButton: TButton
-    Left = 168
-    Height = 25
-    Top = 208
-    Width = 88
-    Caption = 'GitHub page'
-    TabOrder = 3
+    TabOrder = 1
   end
 end

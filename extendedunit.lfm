@@ -1,15 +1,15 @@
-object MainForm: TMainForm
-  Left = 722
-  Height = 297
-  Top = 247
-  Width = 297
+object ExtendedForm: TExtendedForm
+  Left = 518
+  Height = 380
+  Top = 188
+  Width = 378
   Align = alRight
   Anchors = []
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Калькулятор'
-  ClientHeight = 258
-  ClientWidth = 297
+  ClientHeight = 360
+  ClientWidth = 378
   Color = clGradientInactiveCaption
   KeyPreview = True
   Menu = CalcMenu
@@ -19,19 +19,20 @@ object MainForm: TMainForm
   LCLVersion = '2.0.6.0'
   object Image1: TImage
     Left = 0
-    Height = 279
+    Height = 408
     Top = -48
-    Width = 297
+    Width = 392
   end
   object ButtonsPanel: TPanel
     Left = 0
-    Height = 229
+    Height = 208
     Top = 48
-    Width = 297
+    Width = 256
     Align = alCustom
-    ClientHeight = 229
-    ClientWidth = 297
+    ClientHeight = 208
+    ClientWidth = 256
     TabOrder = 0
+    OnClick = ButtonsPanelClick
     object BackspaceButton: TSpeedButton
       Left = 48
       Height = 25
@@ -63,6 +64,7 @@ object MainForm: TMainForm
       Top = 40
       Width = 40
       Caption = '7'
+      Color = clRed
       OnClick = CommaAndDigitsClick
     end
     object DigButton8: TSpeedButton
@@ -222,7 +224,7 @@ object MainForm: TMainForm
     Left = 7
     Height = 23
     Top = 24
-    Width = 281
+    Width = 361
     Alignment = taRightJustify
     AutoSize = False
     ReadOnly = True
@@ -230,13 +232,205 @@ object MainForm: TMainForm
     Text = '0.'
   end
   object HistoryLabel: TLabel
-    Left = 142
+    Left = 101
     Height = 15
     Top = 8
     Width = 146
     Alignment = taRightJustify
     AutoSize = False
     ParentColor = False
+  end
+  object extendPanel1: TPanel
+    Left = 256
+    Height = 208
+    Top = 48
+    Width = 122
+    ClientHeight = 208
+    ClientWidth = 122
+    TabOrder = 2
+    object sinButton: TButton
+      Left = 4
+      Height = 25
+      Top = 8
+      Width = 50
+      Caption = 'sin'
+      OnClick = AnotherButtonClick
+      TabOrder = 0
+    end
+    object cosButton: TButton
+      Left = 64
+      Height = 25
+      Top = 8
+      Width = 50
+      Caption = 'cos'
+      OnClick = AnotherButtonClick
+      TabOrder = 1
+    end
+    object tgButton: TButton
+      Left = 4
+      Height = 25
+      Top = 40
+      Width = 50
+      Caption = 'tan'
+      OnClick = AnotherButtonClick
+      TabOrder = 2
+    end
+    object atanButton: TButton
+      Left = 64
+      Height = 25
+      Top = 40
+      Width = 50
+      Caption = 'arctan'
+      OnClick = AnotherButtonClick
+      TabOrder = 3
+    end
+    object lnButton: TButton
+      Left = 4
+      Height = 25
+      Top = 72
+      Width = 50
+      Caption = 'ln'
+      OnClick = AnotherButtonClick
+      TabOrder = 4
+    end
+    object logButton: TButton
+      Left = 64
+      Height = 25
+      Top = 72
+      Width = 50
+      Caption = 'log'
+      OnClick = AnotherButtonClick
+      TabOrder = 5
+    end
+    object absButton: TButton
+      Left = 4
+      Height = 25
+      Top = 104
+      Width = 50
+      Caption = 'abs'
+      OnClick = AnotherButtonClick
+      TabOrder = 6
+    end
+    object factButton: TButton
+      Left = 64
+      Height = 25
+      Top = 104
+      Width = 50
+      Caption = '!'
+      OnClick = AnotherButtonClick
+      TabOrder = 7
+    end
+    object varpowerButton: TButton
+      Left = 4
+      Height = 25
+      Top = 137
+      Width = 110
+      Caption = 'x^y'
+      OnClick = ArithmeticButtonsClick
+      TabOrder = 8
+    end
+  end
+  object extendPanel2: TPanel
+    Left = 0
+    Height = 69
+    Top = 256
+    Width = 377
+    ClientHeight = 69
+    ClientWidth = 377
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 104
+      Height = 15
+      Top = 2
+      Width = 182
+      Caption = 'Перевести в систему счистления'
+      ParentColor = False
+    end
+    object sButton2: TBitBtn
+      Left = 7
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '2'
+      OnClick = SystemClick
+      TabOrder = 0
+    end
+    object sButton3: TBitBtn
+      Left = 60
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '3'
+      OnClick = SystemClick
+      TabOrder = 1
+    end
+    object sButton4: TBitBtn
+      Left = 112
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '4'
+      OnClick = SystemClick
+      TabOrder = 2
+    end
+    object sButton5: TBitBtn
+      Left = 165
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '5'
+      OnClick = SystemClick
+      TabOrder = 3
+    end
+    object sButton6: TBitBtn
+      Left = 219
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '6'
+      OnClick = SystemClick
+      TabOrder = 4
+    end
+    object sButton7: TBitBtn
+      Left = 275
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '7'
+      OnClick = SystemClick
+      TabOrder = 5
+    end
+    object sButton8: TBitBtn
+      Left = 330
+      Height = 40
+      Top = 20
+      Width = 40
+      Caption = '8'
+      OnClick = SystemClick
+      TabOrder = 6
+    end
+  end
+  object Label2: TLabel
+    Left = 9
+    Height = 15
+    Top = 337
+    Width = 112
+    Caption = 'Система счисления:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 123
+    Height = 1
+    Top = 337
+    Width = 1
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 235
+    Height = 23
+    Top = 329
+    Width = 133
+    TabOrder = 4
   end
   object ShortcutsActionList: TActionList
     left = 16

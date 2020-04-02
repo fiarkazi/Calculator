@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, Buttons, LCLType, ActnList, Clipbrd, Menus;
+  StdCtrls, Buttons, LCLType, ActnList, Clipbrd, Menus, DefaultTranslator, LCLTranslator;
 
 type
 
@@ -15,6 +15,7 @@ type
   TMainForm = class(TForm)
     CopyMenuItem: TMenuItem;
     HistoryLabel: TLabel;
+    Image1: TImage;
     ModeSubMenu: TMenuItem;
     ChildMenuItem: TMenuItem;
     BasicMenuItem: TMenuItem;
@@ -64,21 +65,26 @@ type
     ButtonsPanel: TPanel;
     procedure AboutMenuItemClick(Sender: TObject);
     procedure CEButtonActionExecute(Sender: TObject);
+    procedure ChildMenuItemClick(Sender: TObject);
     procedure CtrlCActionExecute(Sender: TObject);
     procedure BackspaceButtonClick(Sender: TObject);
     procedure CtrlVActionExecute(Sender: TObject);
     procedure CommaAndDigitsClick(Sender: TObject);
     procedure CButtonClick(Sender: TObject);
     procedure CEButtonClick(Sender: TObject);
+    procedure EngMenuItemClick(Sender: TObject);
     procedure EqualButtonClick(Sender: TObject);
     procedure HelpMenuItemClick(Sender: TObject);
     procedure KeyboardInput(Sender: TObject; var Key: char);
     procedure BasicMenuItemClick(Sender: TObject);
+    procedure name1MenuItemClick(Sender: TObject);
+    procedure name2MenuItemClick(Sender: TObject);
     procedure PercentButtonClick(Sender: TObject);
     procedure ArithmeticButtonsClick(Sender: TObject);
     procedure PlusMinusButtonClick(Sender: TObject);
     procedure PlusMinusButtonActionExecute(Sender: TObject);
     procedure ProMenuItemClick(Sender: TObject);
+    procedure RusMenuItemClick(Sender: TObject);
     procedure SqrButtonClick(Sender: TObject);
     procedure SqrtButtonClick(Sender: TObject);
   private
@@ -91,11 +97,13 @@ type
 
 var
   MainForm: TMainForm;
+  childProp: boolean;
+  lang: String;
 implementation
 
 {$R *.lfm}
 uses
-  AboutUnit, HelpUnit;
+  AboutUnit, HelpUnit, extendedunit;
 
 { TMainForm }
 
@@ -148,6 +156,64 @@ begin
   CEButton.Click;
 end;
 
+procedure TMainForm.ChildMenuItemClick(Sender: TObject);
+begin
+  childProp:= True;
+  Image1.Picture.LoadFromFile('img/nine.png');
+  DigButton9.Margin:= 0;
+  DigButton9.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/eight.png');
+  DigButton8.Margin:= 0;
+  DigButton8.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/seven.png');
+  DigButton7.Margin:= 0;
+  DigButton7.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/six.png');
+  DigButton6.Margin:= 0;
+  DigButton6.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/five.png');
+  DigButton5.Margin:= 0;
+  DigButton5.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/eight.png');
+  DigButton8.Margin:= 0;
+  DigButton8.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/four.png');
+  DigButton4.Margin:= 0;
+  DigButton4.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/eight.png');
+  DigButton8.Margin:= 0;
+  DigButton8.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/three.png');
+  DigButton3.Margin:= 0;
+  DigButton3.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/eight.png');
+  DigButton8.Margin:= 0;
+  DigButton8.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/two.png');
+  DigButton2.Margin:= 0;
+  DigButton2.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/one.png');
+  DigButton1.Margin:= 0;
+  DigButton1.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/zero.png');
+  DigButton0.Margin:= 0;
+  DigButton0.Glyph:= Image1.Picture.Bitmap;
+
+  Image1.Picture.LoadFromFile('img/childbg.jpg');
+end;
+
 procedure TMainForm.AboutMenuItemClick(Sender: TObject);
 begin
   AboutForm.ShowModal;
@@ -169,6 +235,13 @@ end;
 procedure TMainForm.CEButtonClick(Sender: TObject);
 begin
   OutputEdit.Text := '0';
+end;
+
+procedure TMainForm.EngMenuItemClick(Sender: TObject);
+begin
+  SetDefaultLang('en');
+  AboutUnit.langch('en');
+  HelpUnit.langch('en');
 end;
 
 procedure TMainForm.EqualButtonClick(Sender: TObject);
@@ -251,11 +324,77 @@ begin
   //MainForm.ShowModal
 end;
 
+procedure TMainForm.name1MenuItemClick(Sender: TObject);
+begin
+  if childProp = True then
+    begin
+      DigButton9.Glyph:= nil;
+      DigButton9.Margin:= -1;
+      DigButton8.Glyph:= nil;
+      DigButton8.Margin:= -1;
+      DigButton7.Glyph:= nil;
+      DigButton7.Margin:= -1;
+      DigButton6.Glyph:= nil;
+      DigButton6.Margin:= -1;
+      DigButton5.Glyph:= nil;
+      DigButton5.Margin:= -1;
+      DigButton4.Glyph:= nil;
+      DigButton4.Margin:= -1;
+      DigButton3.Glyph:= nil;
+      DigButton3.Margin:= -1;
+      DigButton2.Glyph:= nil;
+      DigButton2.Margin:= -1;
+      DigButton1.Glyph:= nil;
+      DigButton1.Margin:= -1;
+      DigButton0.Glyph:= nil;
+      DigButton0.Margin:= -1;
+      Image1.Picture:= nil;
+    end;
+  MainForm.Color:= clGradientInactiveCaption;
+end;
+
+procedure TMainForm.name2MenuItemClick(Sender: TObject);
+begin
+  MainForm.Color:= clGradientActiveCaption;
+  if childProp = True then
+    begin
+        DigButton9.Glyph:= nil;
+        DigButton9.Margin:= -1;
+        DigButton8.Glyph:= nil;
+        DigButton8.Margin:= -1;
+        DigButton7.Glyph:= nil;
+        DigButton7.Margin:= -1;
+        DigButton6.Glyph:= nil;
+        DigButton6.Margin:= -1;
+        DigButton5.Glyph:= nil;
+        DigButton5.Margin:= -1;
+        DigButton4.Glyph:= nil;
+        DigButton4.Margin:= -1;
+        DigButton3.Glyph:= nil;
+        DigButton3.Margin:= -1;
+        DigButton2.Glyph:= nil;
+        DigButton2.Margin:= -1;
+        DigButton1.Glyph:= nil;
+        DigButton1.Margin:= -1;
+        DigButton0.Glyph:= nil;
+        DigButton0.Margin:= -1;
+        Image1.Picture:= nil;
+      end;
+end;
+
 
 
 procedure TMainForm.ProMenuItemClick(Sender: TObject);
 begin
-  //ProForm.ShowModal
+  ExtendedForm.Show;
+  MainForm.Visible:= False;
+end;
+
+procedure TMainForm.RusMenuItemClick(Sender: TObject);
+begin
+  SetDefaultLang('ru');
+  AboutUnit.langch('ru');
+  HelpUnit.langch('ru');
 end;
 
 

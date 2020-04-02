@@ -1,7 +1,7 @@
 object AboutForm: TAboutForm
-  Left = 278
+  Left = 671
   Height = 243
-  Top = 206
+  Top = 190
   Width = 429
   ActiveControl = OkButton
   Caption = 'About the program'
@@ -11,6 +11,7 @@ object AboutForm: TAboutForm
   Constraints.MaxWidth = 429
   Constraints.MinHeight = 243
   Constraints.MinWidth = 429
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '2.0.6.0'
   object LicenseMemo: TMemo
@@ -21,6 +22,7 @@ object AboutForm: TAboutForm
     Lines.Strings = (
       'ABOUT HERE!'
     )
+    OnChange = LicenseMemoChange
     ReadOnly = True
     TabOrder = 0
   end

@@ -1,7 +1,7 @@
 object HelpForm: THelpForm
-  Left = 406
+  Left = 525
   Height = 295
-  Top = 213
+  Top = 227
   Width = 429
   ActiveControl = OkButton
   Caption = 'Help'
@@ -11,8 +11,9 @@ object HelpForm: THelpForm
   Constraints.MaxWidth = 429
   Constraints.MinHeight = 295
   Constraints.MinWidth = 429
+  OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '2.0.6.0'
   object HepMemo: TMemo
     Left = 8
     Height = 251
@@ -24,15 +25,11 @@ object HelpForm: THelpForm
       'Main features:'
       '-keyboard input (with Esc, Backspace, etc.);'
       '-shortcuts and hotkeys;'
-      '-buffer (shows the inner memory buffer of the calc).'
+      ''
       ''
       'Shortcuts and hotkeys:'
       '-Ctrl+C: copy the number;'
       '-Crtl+V: paste the number (the existing number is deleted);'
-      '-Ctrl+Q: M-;'
-      '-Ctrl+P: M+;'
-      '-Ctrl+R: MR;'
-      '-Ctrl+L: MC;'
       '-r: 1/x;'
       '-F9: +/-.'
     )

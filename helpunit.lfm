@@ -1,7 +1,7 @@
 object HelpForm: THelpForm
-  Left = 406
+  Left = 525
   Height = 295
-  Top = 213
+  Top = 227
   Width = 429
   ActiveControl = OkButton
   Caption = 'Help'
@@ -11,6 +11,7 @@ object HelpForm: THelpForm
   Constraints.MaxWidth = 429
   Constraints.MinHeight = 295
   Constraints.MinWidth = 429
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '2.0.6.0'
   object HepMemo: TMemo
