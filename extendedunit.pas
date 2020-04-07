@@ -292,6 +292,7 @@ begin
   HelpUnit.langch('en');
 end;
 
+
 procedure TExtendedForm.lnButtonClick(Sender: TObject);
 begin
 

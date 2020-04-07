@@ -189,7 +189,7 @@ msgid "Перевести в систему счистления"
 msgstr ""
 
 #: textendedform.label2.caption
-msgid "Система счисления:"
+msgid "С.С:"
 msgstr ""
 
 #: textendedform.langsubmenu.caption

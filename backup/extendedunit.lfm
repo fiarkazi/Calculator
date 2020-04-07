@@ -47,9 +47,10 @@ object ExtendedForm: TExtendedForm
     Left = 9
     Height = 15
     Top = 337
-    Width = 112
-    Caption = 'Система счисления:'
+    Width = 22
+    Caption = 'С.С:'
     ParentColor = False
+    OnClick = Label2Click
   end
   object Label3: TLabel
     Left = 123

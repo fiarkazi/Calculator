@@ -86,6 +86,7 @@ type
     procedure atanButtonClick(Sender: TObject);
     procedure ChildMenuItemClick(Sender: TObject);
     procedure EngMenuItemClick(Sender: TObject);
+    procedure Label2Click(Sender: TObject);
     procedure lnButtonClick(Sender: TObject);
     procedure name1MenuItemClick(Sender: TObject);
     procedure name2MenuItemClick(Sender: TObject);
@@ -291,6 +292,7 @@ begin
   AboutUnit.langch('en');
   HelpUnit.langch('en');
 end;
+
 
 procedure TExtendedForm.lnButtonClick(Sender: TObject);
 begin
@@ -531,6 +533,8 @@ var i,n: byte;
   temp: double;
 begin
   MathOperationButton:= TButton(Sender).Caption;
+  if (MathOperationButton <> '') THEN
+  begin
     try
       begin
         case MathOperationButton of
@@ -579,6 +583,7 @@ begin
         OutputEdit.Text := 'Exception: out of range';
       end;
     end;
+  end;
   PreviousButtonWasEqual := true;
   PreviousButtonWasAction := false;
 end;

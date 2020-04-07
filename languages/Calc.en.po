@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-02 21:03+0000\n"
-"PO-Revision-Date: 2020-04-02 21:08+0000\n"
+"POT-Creation-Date: 2020-04-07 01:52+0000\n"
+"PO-Revision-Date: 2020-04-07 01:55+0000\n"
 "Last-Translator: \n"
 "Language-Team: Unknown\n"
 "Language: zxx\n"
@@ -55,7 +55,7 @@ msgstr ""
 #: textendedform.aboutmenuitem.caption
 msgctxt "textendedform.aboutmenuitem.caption"
 msgid "О программе"
-msgstr "About program"
+msgstr "About"
 
 #: textendedform.absbutton.caption
 msgid "abs"
@@ -73,7 +73,7 @@ msgstr ""
 #: textendedform.basicmenuitem.caption
 msgctxt "textendedform.basicmenuitem.caption"
 msgid "Простой"
-msgstr "Simple"
+msgstr "Standart"
 
 #: textendedform.caption
 msgctxt "textendedform.caption"
@@ -98,7 +98,7 @@ msgstr ""
 #: textendedform.childmenuitem.caption
 msgctxt "textendedform.childmenuitem.caption"
 msgid "Детская"
-msgstr "Calculator"
+msgstr "Child"
 
 #: textendedform.commabutton.caption
 msgctxt "textendedform.commabutton.caption"
@@ -210,11 +210,11 @@ msgstr "Help"
 
 #: textendedform.label1.caption
 msgid "Перевести в систему счистления"
-msgstr "Convert to num. system"
+msgstr "Convert to numeral system"
 
 #: textendedform.label2.caption
-msgid "Система счисления:"
-msgstr "Numeral system:"
+msgid "С.С:"
+msgstr "N.S.:"
 
 #: textendedform.langsubmenu.caption
 msgctxt "textendedform.langsubmenu.caption"
@@ -247,7 +247,7 @@ msgstr ""
 #: textendedform.name1menuitem.caption
 msgctxt "textendedform.name1menuitem.caption"
 msgid "Серость"
-msgstr "Grey"
+msgstr "Gray"
 
 #: textendedform.name2menuitem.caption
 msgctxt "textendedform.name2menuitem.caption"
@@ -355,7 +355,7 @@ msgstr ""
 #: textendedform.themesubmenu.caption
 msgctxt "textendedform.themesubmenu.caption"
 msgid "Темы Оформления"
-msgstr "Theme"
+msgstr "Style"
 
 #: textendedform.varpowerbutton.caption
 msgid "x^y"
@@ -373,7 +373,7 @@ msgstr ""
 #: tmainform.aboutmenuitem.caption
 msgctxt "tmainform.aboutmenuitem.caption"
 msgid "О программе"
-msgstr "About program"
+msgstr "About"
 
 #: tmainform.backspacebutton.caption
 msgctxt "tmainform.backspacebutton.caption"
@@ -383,7 +383,7 @@ msgstr ""
 #: tmainform.basicmenuitem.caption
 msgctxt "tmainform.basicmenuitem.caption"
 msgid "Простой"
-msgstr "Simple"
+msgstr "Standart"
 
 #: tmainform.caption
 msgctxt "tmainform.caption"
@@ -533,7 +533,7 @@ msgstr ""
 #: tmainform.name1menuitem.caption
 msgctxt "tmainform.name1menuitem.caption"
 msgid "Серость"
-msgstr "Grey"
+msgstr "Gray"
 
 #: tmainform.name2menuitem.caption
 msgctxt "tmainform.name2menuitem.caption"
@@ -598,4 +598,4 @@ msgstr ""
 #: tmainform.themesubmenu.caption
 msgctxt "tmainform.themesubmenu.caption"
 msgid "Темы Оформления"
-msgstr "Theme"
+msgstr "Style"

@@ -1,7 +1,7 @@
 {"version":1,"strings":[
 {"hash":117034240,"name":"textendedform.caption","sourcebytes":[208,154,208,176,208,187,209,140,208,186,209,131,208,187,209,143,209,130,208,190,209,128],"value":"\u041A\u0430\u043B\u044C\u043A\u0443\u043B\u044F\u0442\u043E\u0440"},
 {"hash":814,"name":"textendedform.outputedit.text","sourcebytes":[48,46],"value":"0."},
-{"hash":233577226,"name":"textendedform.label2.caption","sourcebytes":[208,161,208,184,209,129,209,130,208,181,208,188,208,176,32,209,129,209,135,208,184,209,129,208,187,208,181,208,189,208,184,209,143,58],"value":"\u0421\u0438\u0441\u0442\u0435\u043C\u0430 \u0441\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u044F:"},
+{"hash":228899402,"name":"textendedform.label2.caption","sourcebytes":[208,161,46,208,161,58],"value":"\u0421.\u0421:"},
 {"hash":170536933,"name":"textendedform.backspacebutton.caption","sourcebytes":[66,97,99,107,115,112,97,99,101],"value":"Backspace"},
 {"hash":1141,"name":"textendedform.cebutton.caption","sourcebytes":[67,69],"value":"CE"},
 {"hash":67,"name":"textendedform.cbutton.caption","sourcebytes":[67],"value":"C"},
