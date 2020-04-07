@@ -1,0 +1,578 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: aboutunit.slicensetext
+msgid "Программа создана при поддержке студентов"
+msgstr ""
+
+#: helpunit.shelptext
+msgid ""
+"Этот каклькулятор имеет несколько режимов.\n"
+"Основные возможности:\n"
+"- Поддержка ввода с клавиатуры (Esc, Пробел и тд)\n"
+"\n"
+"- Горячие клавиши\n"
+"Горячие клавиши:\n"
+"CTRL+C: копирование результата\n"
+"CTRL+V: вставка числа (текущее будет удалено)\n"
+"r: 1/x\n"
+"F9: +/-\n"
+msgstr ""
+
+#: taboutform.caption
+msgid "About the program"
+msgstr ""
+
+#: taboutform.okbutton.caption
+msgctxt "taboutform.okbutton.caption"
+msgid "Ok"
+msgstr ""
+
+#: textendedform.aboutmenuitem.caption
+msgctxt "textendedform.aboutmenuitem.caption"
+msgid "О программе"
+msgstr ""
+
+#: textendedform.absbutton.caption
+msgid "abs"
+msgstr ""
+
+#: textendedform.atanbutton.caption
+msgid "arctan"
+msgstr ""
+
+#: textendedform.backspacebutton.caption
+msgctxt "textendedform.backspacebutton.caption"
+msgid "Backspace"
+msgstr ""
+
+#: textendedform.basicmenuitem.caption
+msgctxt "textendedform.basicmenuitem.caption"
+msgid "Простой"
+msgstr ""
+
+#: textendedform.caption
+msgctxt "textendedform.caption"
+msgid "Калькулятор"
+msgstr ""
+
+#: textendedform.cbutton.caption
+msgctxt "textendedform.cbutton.caption"
+msgid "C"
+msgstr ""
+
+#: textendedform.cebutton.caption
+msgctxt "textendedform.cebutton.caption"
+msgid "CE"
+msgstr ""
+
+#: textendedform.cebuttonaction.caption
+msgctxt "textendedform.cebuttonaction.caption"
+msgid "CEButtonAction"
+msgstr ""
+
+#: textendedform.childmenuitem.caption
+msgctxt "textendedform.childmenuitem.caption"
+msgid "Детская"
+msgstr ""
+
+#: textendedform.commabutton.caption
+msgctxt "textendedform.commabutton.caption"
+msgid ","
+msgstr ""
+
+#: textendedform.copymenuitem.caption
+msgctxt "textendedform.copymenuitem.caption"
+msgid "Копировать"
+msgstr ""
+
+#: textendedform.cosbutton.caption
+msgid "cos"
+msgstr ""
+
+#: textendedform.ctrlcaction.caption
+msgctxt "textendedform.ctrlcaction.caption"
+msgid "Copy"
+msgstr ""
+
+#: textendedform.ctrlvaction.caption
+msgctxt "textendedform.ctrlvaction.caption"
+msgid "CtrlVAction"
+msgstr ""
+
+#: textendedform.digbutton0.caption
+msgctxt "textendedform.digbutton0.caption"
+msgid "0"
+msgstr ""
+
+#: textendedform.digbutton1.caption
+msgctxt "textendedform.digbutton1.caption"
+msgid "1"
+msgstr ""
+
+#: textendedform.digbutton2.caption
+msgctxt "textendedform.digbutton2.caption"
+msgid "2"
+msgstr ""
+
+#: textendedform.digbutton3.caption
+msgctxt "textendedform.digbutton3.caption"
+msgid "3"
+msgstr ""
+
+#: textendedform.digbutton4.caption
+msgctxt "textendedform.digbutton4.caption"
+msgid "4"
+msgstr ""
+
+#: textendedform.digbutton5.caption
+msgctxt "textendedform.digbutton5.caption"
+msgid "5"
+msgstr ""
+
+#: textendedform.digbutton6.caption
+msgctxt "textendedform.digbutton6.caption"
+msgid "6"
+msgstr ""
+
+#: textendedform.digbutton7.caption
+msgctxt "textendedform.digbutton7.caption"
+msgid "7"
+msgstr ""
+
+#: textendedform.digbutton8.caption
+msgctxt "textendedform.digbutton8.caption"
+msgid "8"
+msgstr ""
+
+#: textendedform.digbutton9.caption
+msgctxt "textendedform.digbutton9.caption"
+msgid "9"
+msgstr ""
+
+#: textendedform.divisionbutton.caption
+msgctxt "textendedform.divisionbutton.caption"
+msgid "/"
+msgstr ""
+
+#: textendedform.editsubmenu.caption
+msgctxt "textendedform.editsubmenu.caption"
+msgid "Правка"
+msgstr ""
+
+#: textendedform.engmenuitem.caption
+msgctxt "textendedform.engmenuitem.caption"
+msgid "Английский"
+msgstr ""
+
+#: textendedform.equalbutton.caption
+msgctxt "textendedform.equalbutton.caption"
+msgid "="
+msgstr ""
+
+#: textendedform.factbutton.caption
+msgid "!"
+msgstr ""
+
+#: textendedform.helpmenuitem.caption
+msgctxt "textendedform.helpmenuitem.caption"
+msgid "Помощь"
+msgstr ""
+
+#: textendedform.helpsubmenu.caption
+msgctxt "textendedform.helpsubmenu.caption"
+msgid "Помощь"
+msgstr ""
+
+#: textendedform.label1.caption
+msgid "Перевести в систему счистления"
+msgstr ""
+
+#: textendedform.label2.caption
+msgid "Система счисления:"
+msgstr ""
+
+#: textendedform.langsubmenu.caption
+msgctxt "textendedform.langsubmenu.caption"
+msgid "Язык"
+msgstr ""
+
+#: textendedform.lnbutton.caption
+msgid "ln"
+msgstr ""
+
+#: textendedform.logbutton.caption
+msgid "log"
+msgstr ""
+
+#: textendedform.minusbutton.caption
+msgctxt "textendedform.minusbutton.caption"
+msgid "-"
+msgstr ""
+
+#: textendedform.modesubmenu.caption
+msgctxt "textendedform.modesubmenu.caption"
+msgid "Режим"
+msgstr ""
+
+#: textendedform.multiplicationbutton.caption
+msgctxt "textendedform.multiplicationbutton.caption"
+msgid "*"
+msgstr ""
+
+#: textendedform.name1menuitem.caption
+msgctxt "textendedform.name1menuitem.caption"
+msgid "Серость"
+msgstr ""
+
+#: textendedform.name2menuitem.caption
+msgctxt "textendedform.name2menuitem.caption"
+msgid "Аллергия"
+msgstr ""
+
+#: textendedform.outputedit.text
+msgctxt "textendedform.outputedit.text"
+msgid "0."
+msgstr ""
+
+#: textendedform.pastemenuitem.caption
+msgctxt "textendedform.pastemenuitem.caption"
+msgid "Вставить"
+msgstr ""
+
+#: textendedform.percentbutton.caption
+msgctxt "textendedform.percentbutton.caption"
+msgid "%"
+msgstr ""
+
+#: textendedform.plusbutton.caption
+msgctxt "textendedform.plusbutton.caption"
+msgid "+"
+msgstr ""
+
+#: textendedform.plusminusbutton.caption
+msgctxt "textendedform.plusminusbutton.caption"
+msgid "+/-"
+msgstr ""
+
+#: textendedform.plusminusbuttonaction.caption
+msgctxt "textendedform.plusminusbuttonaction.caption"
+msgid "PlusMinusButtonAction"
+msgstr ""
+
+#: textendedform.promenuitem.caption
+msgctxt "textendedform.promenuitem.caption"
+msgid "Расширенный"
+msgstr ""
+
+#: textendedform.reversedivisionaction.caption
+msgctxt "textendedform.reversedivisionaction.caption"
+msgid "ReverseDivisionAction"
+msgstr ""
+
+#: textendedform.rusmenuitem.caption
+msgctxt "textendedform.rusmenuitem.caption"
+msgid "Русский"
+msgstr ""
+
+#: textendedform.sbutton2.caption
+msgctxt "textendedform.sbutton2.caption"
+msgid "2"
+msgstr ""
+
+#: textendedform.sbutton3.caption
+msgctxt "textendedform.sbutton3.caption"
+msgid "3"
+msgstr ""
+
+#: textendedform.sbutton4.caption
+msgctxt "textendedform.sbutton4.caption"
+msgid "4"
+msgstr ""
+
+#: textendedform.sbutton5.caption
+msgctxt "textendedform.sbutton5.caption"
+msgid "5"
+msgstr ""
+
+#: textendedform.sbutton6.caption
+msgctxt "textendedform.sbutton6.caption"
+msgid "6"
+msgstr ""
+
+#: textendedform.sbutton7.caption
+msgctxt "textendedform.sbutton7.caption"
+msgid "7"
+msgstr ""
+
+#: textendedform.sbutton8.caption
+msgctxt "textendedform.sbutton8.caption"
+msgid "8"
+msgstr ""
+
+#: textendedform.sinbutton.caption
+msgid "sin"
+msgstr ""
+
+#: textendedform.sqrbutton.caption
+msgctxt "textendedform.sqrbutton.caption"
+msgid "^2"
+msgstr ""
+
+#: textendedform.sqrtbutton.caption
+msgctxt "textendedform.sqrtbutton.caption"
+msgid "sqrt"
+msgstr ""
+
+#: textendedform.tgbutton.caption
+msgid "tan"
+msgstr ""
+
+#: textendedform.themesubmenu.caption
+msgctxt "textendedform.themesubmenu.caption"
+msgid "Темы Оформления"
+msgstr ""
+
+#: textendedform.varpowerbutton.caption
+msgid "x^y"
+msgstr ""
+
+#: thelpform.caption
+msgid "Help"
+msgstr ""
+
+#: thelpform.okbutton.caption
+msgctxt "thelpform.okbutton.caption"
+msgid "Ok"
+msgstr ""
+
+#: tmainform.aboutmenuitem.caption
+msgctxt "tmainform.aboutmenuitem.caption"
+msgid "О программе"
+msgstr ""
+
+#: tmainform.backspacebutton.caption
+msgctxt "tmainform.backspacebutton.caption"
+msgid "Backspace"
+msgstr ""
+
+#: tmainform.basicmenuitem.caption
+msgctxt "tmainform.basicmenuitem.caption"
+msgid "Простой"
+msgstr ""
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid "Калькулятор"
+msgstr ""
+
+#: tmainform.cbutton.caption
+msgctxt "tmainform.cbutton.caption"
+msgid "C"
+msgstr ""
+
+#: tmainform.cebutton.caption
+msgctxt "tmainform.cebutton.caption"
+msgid "CE"
+msgstr ""
+
+#: tmainform.cebuttonaction.caption
+msgctxt "tmainform.cebuttonaction.caption"
+msgid "CEButtonAction"
+msgstr ""
+
+#: tmainform.childmenuitem.caption
+msgctxt "tmainform.childmenuitem.caption"
+msgid "Детская"
+msgstr ""
+
+#: tmainform.commabutton.caption
+msgctxt "tmainform.commabutton.caption"
+msgid ","
+msgstr ""
+
+#: tmainform.copymenuitem.caption
+msgctxt "tmainform.copymenuitem.caption"
+msgid "Копировать"
+msgstr ""
+
+#: tmainform.ctrlcaction.caption
+msgctxt "tmainform.ctrlcaction.caption"
+msgid "Copy"
+msgstr ""
+
+#: tmainform.ctrlvaction.caption
+msgctxt "tmainform.ctrlvaction.caption"
+msgid "CtrlVAction"
+msgstr ""
+
+#: tmainform.digbutton0.caption
+msgctxt "tmainform.digbutton0.caption"
+msgid "0"
+msgstr ""
+
+#: tmainform.digbutton1.caption
+msgctxt "tmainform.digbutton1.caption"
+msgid "1"
+msgstr ""
+
+#: tmainform.digbutton2.caption
+msgctxt "tmainform.digbutton2.caption"
+msgid "2"
+msgstr ""
+
+#: tmainform.digbutton3.caption
+msgctxt "tmainform.digbutton3.caption"
+msgid "3"
+msgstr ""
+
+#: tmainform.digbutton4.caption
+msgctxt "tmainform.digbutton4.caption"
+msgid "4"
+msgstr ""
+
+#: tmainform.digbutton5.caption
+msgctxt "tmainform.digbutton5.caption"
+msgid "5"
+msgstr ""
+
+#: tmainform.digbutton6.caption
+msgctxt "tmainform.digbutton6.caption"
+msgid "6"
+msgstr ""
+
+#: tmainform.digbutton7.caption
+msgctxt "tmainform.digbutton7.caption"
+msgid "7"
+msgstr ""
+
+#: tmainform.digbutton8.caption
+msgctxt "tmainform.digbutton8.caption"
+msgid "8"
+msgstr ""
+
+#: tmainform.digbutton9.caption
+msgctxt "tmainform.digbutton9.caption"
+msgid "9"
+msgstr ""
+
+#: tmainform.divisionbutton.caption
+msgctxt "tmainform.divisionbutton.caption"
+msgid "/"
+msgstr ""
+
+#: tmainform.editsubmenu.caption
+msgctxt "tmainform.editsubmenu.caption"
+msgid "Правка"
+msgstr ""
+
+#: tmainform.engmenuitem.caption
+msgctxt "tmainform.engmenuitem.caption"
+msgid "Английский"
+msgstr ""
+
+#: tmainform.equalbutton.caption
+msgctxt "tmainform.equalbutton.caption"
+msgid "="
+msgstr ""
+
+#: tmainform.helpmenuitem.caption
+msgctxt "tmainform.helpmenuitem.caption"
+msgid "Помощь"
+msgstr ""
+
+#: tmainform.helpsubmenu.caption
+msgctxt "tmainform.helpsubmenu.caption"
+msgid "Помощь"
+msgstr ""
+
+#: tmainform.langsubmenu.caption
+msgctxt "tmainform.langsubmenu.caption"
+msgid "Язык"
+msgstr ""
+
+#: tmainform.minusbutton.caption
+msgctxt "tmainform.minusbutton.caption"
+msgid "-"
+msgstr ""
+
+#: tmainform.modesubmenu.caption
+msgctxt "tmainform.modesubmenu.caption"
+msgid "Режим"
+msgstr ""
+
+#: tmainform.multiplicationbutton.caption
+msgctxt "tmainform.multiplicationbutton.caption"
+msgid "*"
+msgstr ""
+
+#: tmainform.name1menuitem.caption
+msgctxt "tmainform.name1menuitem.caption"
+msgid "Серость"
+msgstr ""
+
+#: tmainform.name2menuitem.caption
+msgctxt "tmainform.name2menuitem.caption"
+msgid "Аллергия"
+msgstr ""
+
+#: tmainform.outputedit.text
+msgctxt "tmainform.outputedit.text"
+msgid "0."
+msgstr ""
+
+#: tmainform.pastemenuitem.caption
+msgctxt "tmainform.pastemenuitem.caption"
+msgid "Вставить"
+msgstr ""
+
+#: tmainform.percentbutton.caption
+msgctxt "tmainform.percentbutton.caption"
+msgid "%"
+msgstr ""
+
+#: tmainform.plusbutton.caption
+msgctxt "tmainform.plusbutton.caption"
+msgid "+"
+msgstr ""
+
+#: tmainform.plusminusbutton.caption
+msgctxt "tmainform.plusminusbutton.caption"
+msgid "+/-"
+msgstr ""
+
+#: tmainform.plusminusbuttonaction.caption
+msgctxt "tmainform.plusminusbuttonaction.caption"
+msgid "PlusMinusButtonAction"
+msgstr ""
+
+#: tmainform.promenuitem.caption
+msgctxt "tmainform.promenuitem.caption"
+msgid "Расширенный"
+msgstr ""
+
+#: tmainform.reversedivisionaction.caption
+msgctxt "tmainform.reversedivisionaction.caption"
+msgid "ReverseDivisionAction"
+msgstr ""
+
+#: tmainform.rusmenuitem.caption
+msgctxt "tmainform.rusmenuitem.caption"
+msgid "Русский"
+msgstr ""
+
+#: tmainform.sqrbutton.caption
+msgctxt "tmainform.sqrbutton.caption"
+msgid "^2"
+msgstr ""
+
+#: tmainform.sqrtbutton.caption
+msgctxt "tmainform.sqrtbutton.caption"
+msgid "sqrt"
+msgstr ""
+
+#: tmainform.themesubmenu.caption
+msgctxt "tmainform.themesubmenu.caption"
+msgid "Темы Оформления"
+msgstr ""
+

@@ -13,6 +13,26 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    DigButton7: TBitBtn;
+    DivisionButton: TBitBtn;
+    MultiplicationButton: TBitBtn;
+    MinusButton: TBitBtn;
+    PlusButton: TBitBtn;
+    CommaButton: TBitBtn;
+    PlusMinusButton: TBitBtn;
+    DigButton0: TBitBtn;
+    SqrtButton: TBitBtn;
+    PercentButton: TBitBtn;
+    SqrButton: TBitBtn;
+    DigButton8: TBitBtn;
+    EqualButton: TBitBtn;
+    DigButton9: TBitBtn;
+    DigButton4: TBitBtn;
+    DigButton5: TBitBtn;
+    DigButton6: TBitBtn;
+    DigButton1: TBitBtn;
+    DigButton2: TBitBtn;
+    DigButton3: TBitBtn;
     CopyMenuItem: TMenuItem;
     HistoryLabel: TLabel;
     Image1: TImage;
@@ -23,6 +43,9 @@ type
     LangSubMenu: TMenuItem;
     RusMenuItem: TMenuItem;
     EngMenuItem: TMenuItem;
+    BackspaceButton: TSpeedButton;
+    CEButton: TSpeedButton;
+    CButton: TSpeedButton;
     ThemeSubMenu: TMenuItem;
     name1MenuItem: TMenuItem;
     name2MenuItem: TMenuItem;
@@ -38,31 +61,7 @@ type
     CtrlVAction: TAction;
     CtrlCAction: TAction;
     ShortcutsActionList: TActionList;
-    BackspaceButton: TSpeedButton;
     OutputEdit: TEdit;
-    EqualButton: TSpeedButton;
-    PlusButton: TSpeedButton;
-    PercentButton: TSpeedButton;
-    SqrButton: TSpeedButton;
-    MinusButton: TSpeedButton;
-    DigButton3: TSpeedButton;
-    DigButton2: TSpeedButton;
-    DigButton1: TSpeedButton;
-    CommaButton: TSpeedButton;
-    PlusMinusButton: TSpeedButton;
-    MultiplicationButton: TSpeedButton;
-    DigButton0: TSpeedButton;
-    DigButton6: TSpeedButton;
-    DigButton5: TSpeedButton;
-    DigButton4: TSpeedButton;
-    DigButton7: TSpeedButton;
-    DigButton8: TSpeedButton;
-    DigButton9: TSpeedButton;
-    DivisionButton: TSpeedButton;
-    SqrtButton: TSpeedButton;
-    CEButton: TSpeedButton;
-    CButton: TSpeedButton;
-    ButtonsPanel: TPanel;
     procedure AboutMenuItemClick(Sender: TObject);
     procedure CEButtonActionExecute(Sender: TObject);
     procedure ChildMenuItemClick(Sender: TObject);

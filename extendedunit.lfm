@@ -23,203 +23,6 @@ object ExtendedForm: TExtendedForm
     Top = -48
     Width = 392
   end
-  object ButtonsPanel: TPanel
-    Left = 0
-    Height = 208
-    Top = 48
-    Width = 256
-    Align = alCustom
-    ClientHeight = 208
-    ClientWidth = 256
-    TabOrder = 0
-    OnClick = ButtonsPanelClick
-    object BackspaceButton: TSpeedButton
-      Left = 48
-      Height = 25
-      Top = 8
-      Width = 88
-      Align = alCustom
-      Caption = 'Backspace'
-      OnClick = BackspaceButtonClick
-    end
-    object CEButton: TSpeedButton
-      Left = 144
-      Height = 25
-      Top = 8
-      Width = 50
-      Caption = 'CE'
-      OnClick = CEButtonClick
-    end
-    object CButton: TSpeedButton
-      Left = 198
-      Height = 25
-      Top = 8
-      Width = 50
-      Caption = 'C'
-      OnClick = CButtonClick
-    end
-    object DigButton7: TSpeedButton
-      Left = 48
-      Height = 40
-      Top = 40
-      Width = 40
-      Caption = '7'
-      Color = clRed
-      OnClick = CommaAndDigitsClick
-    end
-    object DigButton8: TSpeedButton
-      Left = 88
-      Height = 40
-      Top = 40
-      Width = 40
-      Caption = '8'
-      OnClick = CommaAndDigitsClick
-    end
-    object DigButton9: TSpeedButton
-      Left = 128
-      Height = 40
-      Top = 40
-      Width = 40
-      Caption = '9'
-      OnClick = CommaAndDigitsClick
-    end
-    object DivisionButton: TSpeedButton
-      Left = 168
-      Height = 40
-      Top = 40
-      Width = 40
-      Caption = '/'
-      OnClick = ArithmeticButtonsClick
-    end
-    object SqrtButton: TSpeedButton
-      Left = 208
-      Height = 40
-      Top = 40
-      Width = 40
-      Caption = 'sqrt'
-      OnClick = SqrtButtonClick
-    end
-    object PercentButton: TSpeedButton
-      Left = 208
-      Height = 40
-      Top = 80
-      Width = 40
-      Caption = '%'
-      OnClick = PercentButtonClick
-    end
-    object MultiplicationButton: TSpeedButton
-      Left = 168
-      Height = 40
-      Top = 80
-      Width = 40
-      Caption = '*'
-      OnClick = ArithmeticButtonsClick
-    end
-    object DigButton6: TSpeedButton
-      Left = 128
-      Height = 40
-      Top = 80
-      Width = 40
-      Caption = '6'
-      OnClick = CommaAndDigitsClick
-    end
-    object DigButton5: TSpeedButton
-      Left = 88
-      Height = 40
-      Top = 80
-      Width = 40
-      Caption = '5'
-      OnClick = CommaAndDigitsClick
-    end
-    object DigButton4: TSpeedButton
-      Left = 48
-      Height = 40
-      Top = 80
-      Width = 40
-      Caption = '4'
-      OnClick = CommaAndDigitsClick
-    end
-    object SqrButton: TSpeedButton
-      Left = 208
-      Height = 40
-      Top = 120
-      Width = 40
-      Caption = '^2'
-      OnClick = SqrButtonClick
-    end
-    object MinusButton: TSpeedButton
-      Left = 168
-      Height = 40
-      Top = 120
-      Width = 40
-      Caption = '-'
-      OnClick = ArithmeticButtonsClick
-    end
-    object DigButton3: TSpeedButton
-      Left = 128
-      Height = 40
-      Top = 120
-      Width = 40
-      Caption = '3'
-      OnClick = CommaAndDigitsClick
-    end
-    object DigButton2: TSpeedButton
-      Left = 88
-      Height = 40
-      Top = 120
-      Width = 40
-      Caption = '2'
-      OnClick = CommaAndDigitsClick
-    end
-    object DigButton1: TSpeedButton
-      Left = 48
-      Height = 40
-      Top = 120
-      Width = 40
-      Caption = '1'
-      OnClick = CommaAndDigitsClick
-    end
-    object CommaButton: TSpeedButton
-      Left = 128
-      Height = 40
-      Top = 160
-      Width = 40
-      Caption = ','
-      OnClick = CommaAndDigitsClick
-    end
-    object PlusMinusButton: TSpeedButton
-      Left = 88
-      Height = 40
-      Top = 160
-      Width = 40
-      Caption = '+/-'
-      OnClick = PlusMinusButtonClick
-    end
-    object DigButton0: TSpeedButton
-      Left = 48
-      Height = 40
-      Top = 160
-      Width = 40
-      Caption = '0'
-      OnClick = CommaAndDigitsClick
-    end
-    object EqualButton: TSpeedButton
-      Left = 208
-      Height = 40
-      Top = 160
-      Width = 40
-      Caption = '='
-      OnClick = EqualButtonClick
-    end
-    object PlusButton: TSpeedButton
-      Left = 168
-      Height = 40
-      Top = 160
-      Width = 40
-      Caption = '+'
-      OnClick = ArithmeticButtonsClick
-    end
-  end
   object OutputEdit: TEdit
     Left = 7
     Height = 23
@@ -228,7 +31,7 @@ object ExtendedForm: TExtendedForm
     Alignment = taRightJustify
     AutoSize = False
     ReadOnly = True
-    TabOrder = 1
+    TabOrder = 0
     Text = '0.'
   end
   object HistoryLabel: TLabel
@@ -239,176 +42,6 @@ object ExtendedForm: TExtendedForm
     Alignment = taRightJustify
     AutoSize = False
     ParentColor = False
-  end
-  object extendPanel1: TPanel
-    Left = 256
-    Height = 208
-    Top = 48
-    Width = 122
-    ClientHeight = 208
-    ClientWidth = 122
-    TabOrder = 2
-    object sinButton: TButton
-      Left = 4
-      Height = 25
-      Top = 8
-      Width = 50
-      Caption = 'sin'
-      OnClick = AnotherButtonClick
-      TabOrder = 0
-    end
-    object cosButton: TButton
-      Left = 64
-      Height = 25
-      Top = 8
-      Width = 50
-      Caption = 'cos'
-      OnClick = AnotherButtonClick
-      TabOrder = 1
-    end
-    object tgButton: TButton
-      Left = 4
-      Height = 25
-      Top = 40
-      Width = 50
-      Caption = 'tan'
-      OnClick = AnotherButtonClick
-      TabOrder = 2
-    end
-    object atanButton: TButton
-      Left = 64
-      Height = 25
-      Top = 40
-      Width = 50
-      Caption = 'arctan'
-      OnClick = AnotherButtonClick
-      TabOrder = 3
-    end
-    object lnButton: TButton
-      Left = 4
-      Height = 25
-      Top = 72
-      Width = 50
-      Caption = 'ln'
-      OnClick = AnotherButtonClick
-      TabOrder = 4
-    end
-    object logButton: TButton
-      Left = 64
-      Height = 25
-      Top = 72
-      Width = 50
-      Caption = 'log'
-      OnClick = AnotherButtonClick
-      TabOrder = 5
-    end
-    object absButton: TButton
-      Left = 4
-      Height = 25
-      Top = 104
-      Width = 50
-      Caption = 'abs'
-      OnClick = AnotherButtonClick
-      TabOrder = 6
-    end
-    object factButton: TButton
-      Left = 64
-      Height = 25
-      Top = 104
-      Width = 50
-      Caption = '!'
-      OnClick = AnotherButtonClick
-      TabOrder = 7
-    end
-    object varpowerButton: TButton
-      Left = 4
-      Height = 25
-      Top = 137
-      Width = 110
-      Caption = 'x^y'
-      OnClick = ArithmeticButtonsClick
-      TabOrder = 8
-    end
-  end
-  object extendPanel2: TPanel
-    Left = 0
-    Height = 69
-    Top = 256
-    Width = 377
-    ClientHeight = 69
-    ClientWidth = 377
-    TabOrder = 3
-    object Label1: TLabel
-      Left = 104
-      Height = 15
-      Top = 2
-      Width = 182
-      Caption = 'Перевести в систему счистления'
-      ParentColor = False
-    end
-    object sButton2: TBitBtn
-      Left = 7
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '2'
-      OnClick = SystemClick
-      TabOrder = 0
-    end
-    object sButton3: TBitBtn
-      Left = 60
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '3'
-      OnClick = SystemClick
-      TabOrder = 1
-    end
-    object sButton4: TBitBtn
-      Left = 112
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '4'
-      OnClick = SystemClick
-      TabOrder = 2
-    end
-    object sButton5: TBitBtn
-      Left = 165
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '5'
-      OnClick = SystemClick
-      TabOrder = 3
-    end
-    object sButton6: TBitBtn
-      Left = 219
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '6'
-      OnClick = SystemClick
-      TabOrder = 4
-    end
-    object sButton7: TBitBtn
-      Left = 275
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '7'
-      OnClick = SystemClick
-      TabOrder = 5
-    end
-    object sButton8: TBitBtn
-      Left = 330
-      Height = 40
-      Top = 20
-      Width = 40
-      Caption = '8'
-      OnClick = SystemClick
-      TabOrder = 6
-    end
   end
   object Label2: TLabel
     Left = 9
@@ -430,7 +63,363 @@ object ExtendedForm: TExtendedForm
     Height = 23
     Top = 329
     Width = 133
+    TabOrder = 1
+  end
+  object BackspaceButton: TSpeedButton
+    Left = 48
+    Height = 25
+    Top = 56
+    Width = 88
+    Caption = 'Backspace'
+    OnClick = BackspaceButtonClick
+  end
+  object CEButton: TSpeedButton
+    Left = 144
+    Height = 25
+    Top = 56
+    Width = 50
+    Caption = 'CE'
+    OnClick = CEButtonClick
+  end
+  object CButton: TSpeedButton
+    Left = 198
+    Height = 25
+    Top = 56
+    Width = 50
+    Caption = 'C'
+    OnClick = CButtonClick
+  end
+  object SqrtButton: TBitBtn
+    Left = 208
+    Height = 40
+    Top = 88
+    Width = 40
+    Caption = 'sqrt'
+    OnClick = SqrtButtonClick
+    TabOrder = 2
+  end
+  object DivisionButton: TBitBtn
+    Left = 168
+    Height = 40
+    Top = 88
+    Width = 40
+    Caption = '/'
+    OnClick = ArithmeticButtonsClick
+    TabOrder = 3
+  end
+  object DigButton9: TBitBtn
+    Left = 128
+    Height = 40
+    Top = 88
+    Width = 40
+    Caption = '9'
+    OnClick = CommaAndDigitsClick
     TabOrder = 4
+  end
+  object DigButton8: TBitBtn
+    Left = 88
+    Height = 40
+    Top = 88
+    Width = 40
+    Caption = '8'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 5
+  end
+  object DigButton7: TBitBtn
+    Left = 48
+    Height = 40
+    Top = 88
+    Width = 40
+    Caption = '7'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 6
+  end
+  object DigButton4: TBitBtn
+    Left = 48
+    Height = 40
+    Top = 128
+    Width = 40
+    Caption = '4'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 7
+  end
+  object DigButton5: TBitBtn
+    Left = 88
+    Height = 40
+    Top = 128
+    Width = 40
+    Caption = '5'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 8
+  end
+  object DigButton6: TBitBtn
+    Left = 128
+    Height = 40
+    Top = 128
+    Width = 40
+    Caption = '6'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 9
+  end
+  object MultiplicationButton: TBitBtn
+    Left = 168
+    Height = 40
+    Top = 128
+    Width = 40
+    Caption = '*'
+    OnClick = ArithmeticButtonsClick
+    TabOrder = 10
+  end
+  object PercentButton: TBitBtn
+    Left = 208
+    Height = 40
+    Top = 128
+    Width = 40
+    Caption = '%'
+    OnClick = PercentButtonClick
+    TabOrder = 11
+  end
+  object SqrButton: TBitBtn
+    Left = 208
+    Height = 40
+    Top = 168
+    Width = 40
+    Caption = '^2'
+    OnClick = SqrButtonClick
+    TabOrder = 12
+  end
+  object MinusButton: TBitBtn
+    Left = 168
+    Height = 40
+    Top = 168
+    Width = 40
+    Caption = '-'
+    OnClick = ArithmeticButtonsClick
+    TabOrder = 13
+  end
+  object DigButton3: TBitBtn
+    Left = 128
+    Height = 40
+    Top = 168
+    Width = 40
+    Caption = '3'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 14
+  end
+  object DigButton2: TBitBtn
+    Left = 88
+    Height = 40
+    Top = 168
+    Width = 40
+    Caption = '2'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 15
+  end
+  object DigButton1: TBitBtn
+    Left = 48
+    Height = 40
+    Top = 168
+    Width = 40
+    Caption = '1'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 16
+  end
+  object DigButton0: TBitBtn
+    Left = 48
+    Height = 40
+    Top = 208
+    Width = 40
+    Caption = '0'
+    OnClick = CommaAndDigitsClick
+    TabOrder = 17
+  end
+  object PlusMinusButton: TBitBtn
+    Left = 88
+    Height = 40
+    Top = 208
+    Width = 40
+    Caption = '+/-'
+    OnClick = PlusMinusButtonClick
+    TabOrder = 18
+  end
+  object CommaButton: TBitBtn
+    Left = 128
+    Height = 40
+    Top = 208
+    Width = 40
+    Caption = ','
+    OnClick = CommaAndDigitsClick
+    TabOrder = 19
+  end
+  object PlusButton: TBitBtn
+    Left = 168
+    Height = 40
+    Top = 208
+    Width = 40
+    Caption = '+'
+    OnClick = ArithmeticButtonsClick
+    TabOrder = 20
+  end
+  object EqualButton: TBitBtn
+    Left = 208
+    Height = 40
+    Top = 208
+    Width = 40
+    Caption = '='
+    OnClick = EqualButtonClick
+    TabOrder = 21
+  end
+  object sinButton: TButton
+    Left = 258
+    Height = 25
+    Top = 56
+    Width = 50
+    Caption = 'sin'
+    OnClick = AnotherButtonClick
+    TabOrder = 22
+  end
+  object cosButton: TButton
+    Left = 318
+    Height = 25
+    Top = 56
+    Width = 50
+    Caption = 'cos'
+    OnClick = AnotherButtonClick
+    TabOrder = 23
+  end
+  object tgButton: TButton
+    Left = 258
+    Height = 25
+    Top = 88
+    Width = 50
+    Caption = 'tan'
+    OnClick = AnotherButtonClick
+    TabOrder = 24
+  end
+  object atanButton: TButton
+    Left = 318
+    Height = 25
+    Top = 88
+    Width = 50
+    Caption = 'arctan'
+    OnClick = AnotherButtonClick
+    TabOrder = 25
+  end
+  object lnButton: TButton
+    Left = 258
+    Height = 25
+    Top = 120
+    Width = 50
+    Caption = 'ln'
+    OnClick = AnotherButtonClick
+    TabOrder = 26
+  end
+  object logButton: TButton
+    Left = 318
+    Height = 25
+    Top = 120
+    Width = 50
+    Caption = 'log'
+    OnClick = AnotherButtonClick
+    TabOrder = 27
+  end
+  object absButton: TButton
+    Left = 258
+    Height = 25
+    Top = 152
+    Width = 50
+    Caption = 'abs'
+    OnClick = AnotherButtonClick
+    TabOrder = 28
+  end
+  object factButton: TButton
+    Left = 318
+    Height = 25
+    Top = 152
+    Width = 50
+    Caption = '!'
+    OnClick = AnotherButtonClick
+    TabOrder = 29
+  end
+  object varpowerButton: TButton
+    Left = 258
+    Height = 25
+    Top = 185
+    Width = 110
+    Caption = 'x^y'
+    OnClick = ArithmeticButtonsClick
+    TabOrder = 30
+  end
+  object sButton2: TBitBtn
+    Left = 7
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '2'
+    OnClick = SystemClick
+    TabOrder = 31
+  end
+  object Label1: TLabel
+    Left = 104
+    Height = 15
+    Top = 256
+    Width = 182
+    Caption = 'Перевести в систему счистления'
+    ParentColor = False
+  end
+  object sButton3: TBitBtn
+    Left = 60
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '3'
+    OnClick = SystemClick
+    TabOrder = 32
+  end
+  object sButton4: TBitBtn
+    Left = 112
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '4'
+    OnClick = SystemClick
+    TabOrder = 33
+  end
+  object sButton5: TBitBtn
+    Left = 165
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '5'
+    OnClick = SystemClick
+    TabOrder = 34
+  end
+  object sButton6: TBitBtn
+    Left = 219
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '6'
+    OnClick = SystemClick
+    TabOrder = 35
+  end
+  object sButton7: TBitBtn
+    Left = 275
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '7'
+    OnClick = SystemClick
+    TabOrder = 36
+  end
+  object sButton8: TBitBtn
+    Left = 330
+    Height = 40
+    Top = 274
+    Width = 40
+    Caption = '8'
+    OnClick = SystemClick
+    TabOrder = 37
   end
   object ShortcutsActionList: TActionList
     left = 16
@@ -461,8 +450,8 @@ object ExtendedForm: TExtendedForm
     end
   end
   object CalcMenu: TMainMenu
-    left = 16
-    top = 64
+    left = 64
+    top = 24
     object EditSubMenu: TMenuItem
       Caption = 'Правка'
       object CopyMenuItem: TMenuItem

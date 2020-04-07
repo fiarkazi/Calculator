@@ -13,38 +13,58 @@ type
   { TExtendedForm }
 
   TExtendedForm = class(TForm)
-    atanButton: TButton;
     absButton: TButton;
+    atanButton: TButton;
+    BackspaceButton: TSpeedButton;
+    CButton: TSpeedButton;
+    CEButton: TSpeedButton;
+    CommaButton: TBitBtn;
+    cosButton: TButton;
+    DigButton0: TBitBtn;
+    DigButton1: TBitBtn;
+    DigButton2: TBitBtn;
+    DigButton3: TBitBtn;
+    DigButton4: TBitBtn;
+    DigButton5: TBitBtn;
+    DigButton6: TBitBtn;
+    DigButton7: TBitBtn;
+    DigButton8: TBitBtn;
+    DigButton9: TBitBtn;
+    DivisionButton: TBitBtn;
+    EqualButton: TBitBtn;
+    factButton: TButton;
     Image1: TImage;
+    Label1: TLabel;
+    lnButton: TButton;
+    logButton: TButton;
+    MinusButton: TBitBtn;
+    MultiplicationButton: TBitBtn;
+    PercentButton: TBitBtn;
+    PlusButton: TBitBtn;
+    PlusMinusButton: TBitBtn;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    sButton2: TBitBtn;
     sButton3: TBitBtn;
     sButton4: TBitBtn;
     sButton5: TBitBtn;
     sButton6: TBitBtn;
     sButton7: TBitBtn;
     sButton8: TBitBtn;
-    sButton2: TBitBtn;
-    Edit1: TEdit;
-    Label2: TLabel;
-    Label3: TLabel;
-    extendPanel2: TPanel;
-    Label1: TLabel;
-    varpowerButton: TButton;
-    factButton: TButton;
-    logButton: TButton;
-    lnButton: TButton;
-    tgButton: TButton;
-    cosButton: TButton;
     sinButton: TButton;
+    SqrButton: TBitBtn;
+    SqrtButton: TBitBtn;
     CopyMenuItem: TMenuItem;
     HistoryLabel: TLabel;
     ModeSubMenu: TMenuItem;
     ChildMenuItem: TMenuItem;
     BasicMenuItem: TMenuItem;
-    extendPanel1: TPanel;
     ProMenuItem: TMenuItem;
     LangSubMenu: TMenuItem;
     RusMenuItem: TMenuItem;
     EngMenuItem: TMenuItem;
+    tgButton: TButton;
     ThemeSubMenu: TMenuItem;
     name1MenuItem: TMenuItem;
     name2MenuItem: TMenuItem;
@@ -60,31 +80,8 @@ type
     CtrlVAction: TAction;
     CtrlCAction: TAction;
     ShortcutsActionList: TActionList;
-    BackspaceButton: TSpeedButton;
     OutputEdit: TEdit;
-    EqualButton: TSpeedButton;
-    PlusButton: TSpeedButton;
-    PercentButton: TSpeedButton;
-    SqrButton: TSpeedButton;
-    MinusButton: TSpeedButton;
-    DigButton3: TSpeedButton;
-    DigButton2: TSpeedButton;
-    DigButton1: TSpeedButton;
-    CommaButton: TSpeedButton;
-    PlusMinusButton: TSpeedButton;
-    MultiplicationButton: TSpeedButton;
-    DigButton0: TSpeedButton;
-    DigButton6: TSpeedButton;
-    DigButton5: TSpeedButton;
-    DigButton4: TSpeedButton;
-    DigButton7: TSpeedButton;
-    DigButton8: TSpeedButton;
-    DigButton9: TSpeedButton;
-    DivisionButton: TSpeedButton;
-    SqrtButton: TSpeedButton;
-    CEButton: TSpeedButton;
-    CButton: TSpeedButton;
-    ButtonsPanel: TPanel;
+    varpowerButton: TButton;
     procedure AboutMenuItemClick(Sender: TObject);
     procedure atanButtonClick(Sender: TObject);
     procedure ChildMenuItemClick(Sender: TObject);
@@ -534,6 +531,8 @@ var i,n: byte;
   temp: double;
 begin
   MathOperationButton:= TButton(Sender).Caption;
+  if (MathOperationButton <> '') THEN
+  begin
     try
       begin
         case MathOperationButton of
@@ -582,6 +581,7 @@ begin
         OutputEdit.Text := 'Exception: out of range';
       end;
     end;
+  end;
   PreviousButtonWasEqual := true;
   PreviousButtonWasAction := false;
 end;
