@@ -422,13 +422,17 @@ end;
 procedure TExtendedForm.SystemClick(Sender: TObject);
 var n:longint;
 k:integer;
+temp: double;
 begin
   Label3.Caption:= TButton(Sender).Caption;
+  temp:= Frac(StrToFloat(OutputEdit.Text));
+  if temp = 0 then
+    begin
+    n:= StrToInt(OutputEdit.Text);
+    k:= StrToInt(TButton(Sender).Caption);
+    Edit1.Text:= DecTox(N, k);
 
-
-  n:= StrToInt(OutputEdit.Text);
-  k:= StrToInt(TButton(Sender).Caption);
-  Edit1.Text:= DecTox(N, k);
+    end;
 end;
 
 
@@ -483,6 +487,8 @@ begin
 end;
 
 procedure TExtendedForm.EqualButtonClick(Sender: TObject);
+var i,n: byte;
+var temp: double;
 begin
   PrevMathButton := '';
   if (PreviousButtonWasEqual = false) THEN
@@ -502,7 +508,7 @@ begin
                 else
                   begin
                     CButton.Click;
-                    OutputEdit.Text := 'Error: division by zero';
+                    OutputEdit.Text := sEDivisionbyzero;
                   end;
             end;
           '*': OutputEdit.Text := FloatToStr(double1 * double2);
@@ -510,6 +516,40 @@ begin
           '+': OutputEdit.Text := FloatToStr(double1 + double2);
           '%': OutputEdit.Text := FloatToStr((double1/100)*double2);
           'x^y': OutputEdit.Text:= FloatToStr(Power(double1, double2));
+          '^2': OutputEdit.Text := FloatToStr(sqr(double1));
+          'sin':  OutputEdit.Text:= FloatToStr(sin((double1)));
+          'cos':  OutputEdit.Text:= FloatToStr(cos((double1)));
+          'tan':  OutputEdit.Text:= FloatToStr(sin((double1))/cos((double1)));
+          'arctan': OutputEdit.Text:= FloatToStr(arctan((double1)));
+          'log':  begin
+                  if double1 < 0 then
+                      OutputEdit.Text := sENegative
+                  else
+                      OutputEdit.Text:= FloatToStr(log10(double1));
+                  end;
+          'ln':   begin
+                  if double1 < 0 then
+                     OutputEdit.Text := sENegative
+                  else
+                     OutputEdit.Text:= FloatToStr(logn(double1, 2.71));
+                  end;
+          'abs':  OutputEdit.Text:= FloatToStr(-1*(double1));
+          '!': begin
+            if (Frac(double1)=0) then
+               begin
+                 if (double1>1) then
+                   begin
+                     temp:= 1;
+                     n:= Trunc(double1);
+                     for i:=2 to n do
+                       temp:= temp*i;
+                   end
+                 else
+                     temp:= 1;
+                 OutputEdit.Text:= FloatToStr(temp);
+               end
+            else OutputEdit.Text:= sETrunced;
+          end;
 
         end;
         HistoryLabel.Caption := '';
@@ -517,10 +557,12 @@ begin
         double2 := 0;
       end;
     except
-      on Exception do
+      on EOverflow do
       begin
-        OutputEdit.Text := 'Exception: out of range';
-      end;
+        OutputEdit.Text := sEOutofrange;
+      end
+      else
+         OutputEdit.Text := sEInvalidinput;
     end;
   end;
   PreviousButtonWasEqual := true;
@@ -531,9 +573,14 @@ procedure TExtendedForm.AnotherButtonClick(Sender: TObject);
 var i,n: byte;
   temp: double;
 begin
-  MathOperationButton:= TButton(Sender).Caption;
-  if (MathOperationButton <> '') THEN
-  begin
+  if (OutputEdit.Text <> '') then
+     begin
+          MathOperationButton := TButton(Sender).Caption;
+          PrevMathButton:= TButton(Sender).Caption;
+          if (PreviousButtonWasAction = false) THEN
+             double1 := StrToFloatDef(OutputEdit.Text,0);
+          PreviousButtonWasEqual := false;
+          PreviousButtonWasAction := true;
     try
       begin
         case MathOperationButton of
@@ -544,14 +591,14 @@ begin
           'log':  begin
                   temp:= StrToFloat(OutputEdit.Text);
                   if temp < 0 then
-                  OutputEdit.Text := 'Ошибка: дано отрицательное число!'
+                  OutputEdit.Text := sENegative
                   else
                   OutputEdit.Text:= FloatToStr(log10(temp));
           end;
           'ln':   begin
                   temp:= StrToFloat(OutputEdit.Text);
                   if temp < 0 then
-                  OutputEdit.Text := 'Ошибка: дано отрицательное число!'
+                  OutputEdit.Text := sENegative
                   else
                   OutputEdit.Text:= FloatToStr(logn(temp, 2.71));
           end;
@@ -577,10 +624,12 @@ begin
         double1 := StrToFloatDef(OutputEdit.Text,0);
       end;
     except
-      on Exception do
+      on EOverflow do
       begin
-        OutputEdit.Text := 'Exception: out of range';
-      end;
+        OutputEdit.Text := sEOutofrange;
+      end
+      else
+         OutputEdit.Text:= sEInvalidinput;
     end;
   end;
   PreviousButtonWasEqual := true;
@@ -658,7 +707,7 @@ begin
           else
             begin
               CButton.Click;
-              OutputEdit.Text := 'Error: division by zero or unhandled division';
+              OutputEdit.Text := sEDivisionbyzero;
             end;
       end;
     end;
@@ -699,15 +748,25 @@ end;
 
 procedure TExtendedForm.SqrButtonClick(Sender: TObject);
 begin
-  try
-     OutputEdit.Text := FloatToStr(sqr(StrToFloat(OutputEdit.Text)));
-  except
-    on Exception do
-    begin
-      CButton.Click;
-      OutputEdit.Text := 'Error: invalid input';
-    end;
-  end;
+  if (OutputEdit.Text <> '') then
+     begin
+          MathOperationButton := TButton(Sender).Caption;
+          PrevMathButton:= TButton(Sender).Caption;
+          if (PreviousButtonWasAction = false) THEN
+             double1 := StrToFloatDef(OutputEdit.Text,0);
+          PreviousButtonWasEqual := false;
+          PreviousButtonWasAction := true;
+
+          try
+           OutputEdit.Text := FloatToStr(sqr(StrToFloat(OutputEdit.Text)));
+          except on EOverflow do
+            begin
+              CButton.Click;
+              OutputEdit.Text := sEOutofrange;
+            end
+          else OutputEdit.Text := sEInvalidinput;
+        end;
+     end;
 end;
 
 procedure TExtendedForm.SqrtButtonClick(Sender: TObject);
@@ -718,7 +777,7 @@ begin
     on Exception do
     begin
       CButton.Click;
-      OutputEdit.Text := 'Error: invalid input';
+      OutputEdit.Text := sEInvalidinput;
     end;
   end;
 end;

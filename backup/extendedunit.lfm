@@ -50,7 +50,6 @@ object ExtendedForm: TExtendedForm
     Width = 22
     Caption = 'С.С:'
     ParentColor = False
-    OnClick = Label2Click
   end
   object Label3: TLabel
     Left = 123

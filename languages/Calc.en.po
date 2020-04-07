@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-07 01:52+0000\n"
-"PO-Revision-Date: 2020-04-07 01:55+0000\n"
+"POT-Creation-Date: 2020-04-07 08:18+0000\n"
+"PO-Revision-Date: 2020-04-07 08:22+0000\n"
 "Last-Translator: \n"
 "Language-Team: Unknown\n"
 "Language: zxx\n"
@@ -42,6 +42,26 @@ msgstr ""
 "CTRL + V: insert a number (the current one will be deleted)\n"
 "r: 1 / x\n"
 "F9: +/-"
+
+#: mainunit.sedivisionbyzero
+msgid "Ошибка: деление на ноль"
+msgstr "Error: division by zero"
+
+#: mainunit.seinvalidinput
+msgid "Ошибка: некорректный ввод"
+msgstr "Error: invalid input"
+
+#: mainunit.senegative
+msgid "Ошибка: дано отрицательное число"
+msgstr "Error: negative number was given"
+
+#: mainunit.seoutofrange
+msgid "Ошибка: переполнение"
+msgstr "Error: overflow"
+
+#: mainunit.setrunced
+msgid "Ошибка: дано дробное число"
+msgstr "Error: fractional number was given"
 
 #: taboutform.caption
 msgid "About the program"

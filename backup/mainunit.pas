@@ -14,12 +14,12 @@ type
 
   TMainForm = class(TForm)
     DigButton7: TBitBtn;
-    BitBtn10: TBitBtn;
-    BitBtn11: TBitBtn;
-    BitBtn12: TBitBtn;
+    DivisionButton: TBitBtn;
+    MultiplicationButton: TBitBtn;
+    MinusButton: TBitBtn;
     PlusButton: TBitBtn;
-    BitBtn14: TBitBtn;
-    BitBtn15: TBitBtn;
+    CommaButton: TBitBtn;
+    PlusMinusButton: TBitBtn;
     DigButton0: TBitBtn;
     SqrtButton: TBitBtn;
     PercentButton: TBitBtn;
@@ -45,7 +45,7 @@ type
     EngMenuItem: TMenuItem;
     BackspaceButton: TSpeedButton;
     CEButton: TSpeedButton;
-    SpeedButton3: TSpeedButton;
+    CButton: TSpeedButton;
     ThemeSubMenu: TMenuItem;
     name1MenuItem: TMenuItem;
     name2MenuItem: TMenuItem;
@@ -93,6 +93,12 @@ type
   public
     { public declarations }
   end;
+resourcestring
+sEOutofrange = 'Ошибка: переполнение';
+sEDivisionbyzero = 'Ошибка: деление на ноль';
+sEInvalidinput = 'Ошибка: некорректный ввод';
+sENegative = 'Ошибка: дано отрицательное число';
+sETrunced = 'Ошибка: дано дробное число';
 
 var
   MainForm: TMainForm;
@@ -263,13 +269,14 @@ begin
                 else
                   begin
                     CButton.Click;
-                    OutputEdit.Text := 'Error: division by zero';
+                    OutputEdit.Text := sEDivisionbyzero;
                   end;
             end;
           '*': OutputEdit.Text := FloatToStr(double1 * double2);
           '-': OutputEdit.Text := FloatToStr(double1 - double2);
           '+': OutputEdit.Text := FloatToStr(double1 + double2);
           '%': OutputEdit.Text := FloatToStr((double1/100)*double2);
+          '^2': OutputEdit.Text := FloatToStr(sqr(double1));
         end;
         HistoryLabel.Caption := '';
         double1 := StrToFloatDef(OutputEdit.Text,0);
@@ -278,7 +285,7 @@ begin
     except
       on Exception do
       begin
-        OutputEdit.Text := 'Exception: out of range';
+        OutputEdit.Text := sEOutofrange;
       end;
     end;
   end;
@@ -420,7 +427,7 @@ begin
           else
             begin
               CButton.Click;
-              OutputEdit.Text := 'Error: division by zero or unhandled division';
+              OutputEdit.Text := sEDivisionbyzero;
             end;
       end;
     end;
@@ -460,16 +467,27 @@ end;
 
 procedure TMainForm.SqrButtonClick(Sender: TObject);
 begin
-  try
-     OutputEdit.Text := FloatToStr(sqr(StrToFloat(OutputEdit.Text)));
-  except
-    on Exception do
-    begin
-      CButton.Click;
-      OutputEdit.Text := 'Error: invalid input';
-    end;
-  end;
+  if (OutputEdit.Text <> '') then
+     begin
+          MathOperationButton := TButton(Sender).Caption;
+          PrevMathButton:= TButton(Sender).Caption;
+          if (PreviousButtonWasAction = false) THEN
+             double1 := StrToFloatDef(OutputEdit.Text,0);
+          PreviousButtonWasEqual := false;
+          PreviousButtonWasAction := true;
+
+          try
+           OutputEdit.Text := FloatToStr(sqr(StrToFloat(OutputEdit.Text)));
+          except on Exception do
+            begin
+              CButton.Click;
+              OutputEdit.Text := sEInvalidinput;
+            end;
+        end;
+     end;
 end;
+
+
 
 procedure TMainForm.SqrtButtonClick(Sender: TObject);
 begin
@@ -479,7 +497,7 @@ begin
     on Exception do
     begin
       CButton.Click;
-      OutputEdit.Text := 'Error: invalid input';
+      OutputEdit.Text := sEInvalidinput;
     end;
   end;
 end;

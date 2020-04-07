@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 889
+  Left = 918
   Height = 297
-  Top = 202
+  Top = 149
   Width = 297
   Align = alRight
   Anchors = []
@@ -59,7 +59,7 @@ object MainForm: TMainForm
     Caption = 'CE'
     OnClick = CEButtonClick
   end
-  object SpeedButton3: TSpeedButton
+  object CButton: TSpeedButton
     Left = 198
     Height = 25
     Top = 56
@@ -148,7 +148,7 @@ object MainForm: TMainForm
     OnClick = CommaAndDigitsClick
     TabOrder = 9
   end
-  object BitBtn10: TBitBtn
+  object DivisionButton: TBitBtn
     Left = 168
     Height = 40
     Top = 88
@@ -157,7 +157,7 @@ object MainForm: TMainForm
     OnClick = ArithmeticButtonsClick
     TabOrder = 10
   end
-  object BitBtn11: TBitBtn
+  object MultiplicationButton: TBitBtn
     Left = 168
     Height = 40
     Top = 128
@@ -166,7 +166,7 @@ object MainForm: TMainForm
     OnClick = ArithmeticButtonsClick
     TabOrder = 11
   end
-  object BitBtn12: TBitBtn
+  object MinusButton: TBitBtn
     Left = 168
     Height = 40
     Top = 168
@@ -184,7 +184,7 @@ object MainForm: TMainForm
     OnClick = ArithmeticButtonsClick
     TabOrder = 13
   end
-  object BitBtn14: TBitBtn
+  object CommaButton: TBitBtn
     Left = 128
     Height = 40
     Top = 208
@@ -193,7 +193,7 @@ object MainForm: TMainForm
     OnClick = CommaAndDigitsClick
     TabOrder = 14
   end
-  object BitBtn15: TBitBtn
+  object PlusMinusButton: TBitBtn
     Left = 88
     Height = 40
     Top = 208
